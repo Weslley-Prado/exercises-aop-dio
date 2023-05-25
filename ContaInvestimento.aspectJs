@@ -1,0 +1,8 @@
+public class ContaInvestimento extends Conta {
+  @Override
+  public double calcularValorTarifaManutencao() {
+    // Implemente a lógica específica para calcular a tarifa de manutenção da conta
+    // de investimento
+    return 0.0;
+  }
+}

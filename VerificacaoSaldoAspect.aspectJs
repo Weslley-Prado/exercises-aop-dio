@@ -1,0 +1,16 @@
+public aspect VerificacaoSaldoAspect {
+  pointcut saqueOperation(): call(void Conta.sacar(double));
+
+  before(double valor): saqueOperation() && args(valor) {
+      // Obtém todas as contas existentes no sistema
+      Conta[] contas = // Obtenha todas as contas do sistema (pode ser uma lista, banco de dados, etc.)
+
+      // Verifica o saldo em cada conta
+      for (Conta conta : contas) {
+          if (conta.getSaldo() < valor) {
+              System.out.println("Saldo insuficiente na conta " + conta.getNumeroConta() + " para o saque de " + valor);
+              // Ou lance uma exceção adequada, dependendo do seu contexto
+          }
+      }
+  }
+}

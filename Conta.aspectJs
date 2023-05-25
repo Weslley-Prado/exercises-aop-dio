@@ -1,0 +1,21 @@
+import java.util.Date;
+
+public class Conta {
+  private String TipoConta;
+  private String TipoCliente;
+  private Date DataAbertura;
+  private double Saldo;
+
+  public void sacar(double valor) {
+    // Implemente a lógica para realizar o saque
+  }
+
+  public void depositar(double valor) {
+    // Implemente a lógica para realizar o depósito
+  }
+
+  public double calcularValorTarifaManutencao() {
+    // Implemente a lógica para calcular a tarifa de manutenção
+    return 0.0;
+  }
+}
